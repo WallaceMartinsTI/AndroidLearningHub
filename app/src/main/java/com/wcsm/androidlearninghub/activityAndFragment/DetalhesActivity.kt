@@ -1,5 +1,6 @@
 package com.wcsm.androidlearninghub.activityAndFragment
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -30,13 +31,18 @@ class DetalhesActivity : AppCompatActivity() {
         val bundle = intent.extras // todos os parâmetros
 
         if(bundle != null) {
-            val filme = bundle.getString("filme")
-            val classificacao = bundle.getInt("classificacao")
-            val avaliacoes = bundle.getDouble("avaliacoes")
+            //val filme = bundle.getString("filme")
+            //val classificacao = bundle.getInt("classificacao")
+            //val avaliacoes = bundle.getDouble("avaliacoes")
+            //val resultado = "filme: $filme\nclassificação: $classificacao\navaliação: $avaliacoes"
 
-            val resultado = "filme: $filme\nclassificação: $classificacao\navaliação: $avaliacoes"
+            // SERIALIZABLE
+            //val filme = bundle.getSerializable("filme") as Filme
 
-            textFilme.text = resultado
+            // PARCELABLE
+            val filme = bundle.getParcelable<Filme>("filme")
+
+            textFilme.text = "${filme?.nome} - ${filme?.distribuidor}"
         }
 
         buttonFechar.setOnClickListener {
