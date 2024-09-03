@@ -1,8 +1,7 @@
-package com.wcsm.androidlearninghub.activityAndFragment
+package com.wcsm.androidlearninghub.activity
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
-import java.io.Serializable
 
 @Parcelize
 data class Filme(

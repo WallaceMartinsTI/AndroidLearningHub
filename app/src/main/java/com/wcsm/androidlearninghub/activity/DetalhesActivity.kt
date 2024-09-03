@@ -1,6 +1,5 @@
-package com.wcsm.androidlearninghub.activityAndFragment
+package com.wcsm.androidlearninghub.activity
 
-import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView

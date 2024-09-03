@@ -28,7 +28,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wcsm.androidlearninghub.activityAndFragment.ActivityAndFragmentActivity
+import com.wcsm.androidlearninghub.activity.ActivityActivity
+import com.wcsm.androidlearninghub.fragment.FragmentActivity
 import com.wcsm.androidlearninghub.scrollview.ScrollviewActivity
 
 class MainActivity : AppCompatActivity() {
@@ -50,8 +51,12 @@ class MainActivity : AppCompatActivity() {
                 activity = ScrollviewActivity()
             ),
             ContentItem(
-                title = "Activity e Fragments",
-                activity = ActivityAndFragmentActivity()
+                title = "Activity",
+                activity = ActivityActivity()
+            ),
+            ContentItem(
+                title = "Fragment",
+                activity = FragmentActivity()
             )
         )
 
