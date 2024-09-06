@@ -23,16 +23,40 @@ class InterfaceComponentsActivity : AppCompatActivity() {
         }
 
         with(binding) {
-            cbConfirmacao.setOnCheckedChangeListener { _, isChecked ->
-                val resultado = if(isChecked) "Sim" else "Não"
-                binding.textResultado.text = "Valor selecionado: $resultado"
+            btnEnviar.setOnClickListener {
+                //checkbox()
+
+                radioButton()
             }
-            
-            /*cbConfirmacao.setOnClickListener {
-                val selecionado = cbConfirmacao.isChecked
-                val resultado = if(selecionado) "Sim" else "Não"
-                binding.textResultado.text = "Valor selecionado: $resultado"
-            }*/
         }
+    }
+
+    private fun checkbox() {
+        // Checkbox
+        binding.cbConfirmacao.setOnCheckedChangeListener { _, isChecked ->
+            val resultado = if(isChecked) "Sim" else "Não"
+            binding.textResultado.text = "Valor selecionado: $resultado"
+        }
+
+        /*binding.cbConfirmacao.setOnClickListener {
+            val selecionado = binding.cbConfirmacao.isChecked
+            val resultado = if(selecionado) "Sim" else "Não"
+            binding.textResultado.text = "Valor selecionado: $resultado"
+        }*/
+    }
+
+    private fun radioButton() {
+        // RadioButton
+        val masculino = binding.rbMasculino.isChecked
+        binding.textResultado.text = if(masculino) "Masculino" else "Feminino"
+
+        val idItemSelecionado = binding.rgSexo.checkedRadioButtonId
+        binding.textResultado.text = when(idItemSelecionado) {
+            R.id.rbMasculino -> "Masculino"
+            R.id.rbFeminino -> "Feminino"
+            else -> "Nada selecionado"
+        }
+
+        binding.rgSexo.clearCheck()
     }
 }
