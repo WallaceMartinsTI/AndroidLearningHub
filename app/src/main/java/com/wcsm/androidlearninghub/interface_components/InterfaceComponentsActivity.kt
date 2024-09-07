@@ -25,10 +25,18 @@ class InterfaceComponentsActivity : AppCompatActivity() {
         with(binding) {
             btnEnviar.setOnClickListener {
                 //checkbox()
-
-                radioButton()
+                //radioButton()
+                switchToggle()
             }
         }
+    }
+
+    private fun switchToggle() {
+        val switchMarcado = binding.switchNotificacoes.isChecked
+        val toggleMarcado = binding.toggleAtivo.isChecked
+
+        val texto = "Switch: $switchMarcado Toggle: $toggleMarcado"
+        binding.textResultado.text = texto
     }
 
     private fun checkbox() {

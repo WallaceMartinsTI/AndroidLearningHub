@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.wcsm.androidlearninghub.activity.ActivityActivity
 import com.wcsm.androidlearninghub.fragment.FragmentActivity
+import com.wcsm.androidlearninghub.interface_components.InterfaceComponentsActivity
 import com.wcsm.androidlearninghub.recyclerview.RecyclerviewActivity
 import com.wcsm.androidlearninghub.scrollview.ScrollviewActivity
 
@@ -62,6 +63,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "RecyclerView",
                 activity = RecyclerviewActivity()
+            ),
+            ContentItem(
+                title = "Interface Components",
+                activity = InterfaceComponentsActivity()
             )
         )
 
