@@ -3,8 +3,15 @@
     <style name="Base.Theme.AndroidLearningHub" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:windowBackground">@color/cinza</item>
+        <item name="actionOverflowButtonStyle">@style/ActionOverflowButton</item>
     </style>
+
+    <style name="ActionBarActivity" parent="Theme.Material3.DayNight" />
+
+    <style name="ActionOverflowButton" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="tint">@color/white</item>
+    </style>
+
 
     <style name="Theme.AndroidLearningHub" parent="Base.Theme.AndroidLearningHub" />
 </resources>

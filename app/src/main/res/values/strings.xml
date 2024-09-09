@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">AndroidLearningHub</string>
+    <string name="app_name">Android Learning Hub</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- interface_components -->
+    <string-array name="categorias">
+        <item>Selecione uma categoria</item>
+        <item>Eletrônicos</item>
+        <item>Roupas</item>
+        <item>Casa &amp; Construção</item>
+    </string-array>
 </resources>

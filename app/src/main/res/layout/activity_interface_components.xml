@@ -67,6 +67,11 @@
             android:textOff="INATIVO"
             android:textOn="ATIVO" />
 
+        <Spinner
+            android:id="@+id/spinnerCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
         <Button
             android:id="@+id/btnEnviar"
             android:layout_width="match_parent"
@@ -78,5 +83,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="resultado" />
+
+        <Button
+            android:id="@+id/btnGoToActionbarActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IR PARA ACTIONBAR ACTIVITY" />
+
+        <Button
+            android:id="@+id/btnGoToToolbarActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IR PARA TOOLBAR ACTIVITY" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
