@@ -29,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.wcsm.androidlearninghub.activity.ActivityActivity
+import com.wcsm.androidlearninghub.coroutines.CoroutinesActivity
 import com.wcsm.androidlearninghub.fragment.FragmentActivity
 import com.wcsm.androidlearninghub.interface_components.InterfaceComponentsActivity
 import com.wcsm.androidlearninghub.recyclerview.RecyclerviewActivity
@@ -67,6 +68,11 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Interface Components",
                 activity = InterfaceComponentsActivity()
+            )
+            ,
+            ContentItem(
+                title = "Coroutines",
+                activity = CoroutinesActivity()
             )
         )
 
