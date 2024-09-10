@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.wcsm.androidlearninghub.R
+import com.wcsm.androidlearninghub.databinding.ItemCardviewBinding
 
 class MensagemAdapter(
     private val clique: (String) -> Unit
@@ -22,8 +23,13 @@ class MensagemAdapter(
     }
 
     inner class MensagemViewHolder(
-        val itemView: View
-    ) : ViewHolder(itemView) {
+        // Utilizado sem o viewBinding
+        // val itemView: View
+        val binding: ItemCardviewBinding
+
+        // Utilizado sem o viewBinding
+        // ) : ViewHolder(itemView) {
+    ) : ViewHolder(binding.root) {
         //val textNome: TextView = itemView.findViewById(R.id.text_rv_nome)
         //val textUltima: TextView = itemView.findViewById(R.id.text_ultima)
         //val textHorario: TextView = itemView.findViewById(R.id.text_horario)
@@ -34,10 +40,14 @@ class MensagemAdapter(
         val cardView: CardView = itemView.findViewById(R.id.card_view_layout)
 
         fun bind(mensagem: Mensagem) {
-            textNome.text = mensagem.nome
-            textUltima.text = mensagem.ultima
+            // Utilizado sem o viewBinding
+            // textNome.text = mensagem.nome
+            // textUltima.text = mensagem.ultima
 
-            cardView.setOnClickListener {
+            binding.textCardNome.text = mensagem.nome
+            binding.textCardUltima.text = mensagem.ultima
+
+            binding.cardViewLayout.setOnClickListener {
                 clique( mensagem.nome )
                 /*Toast.makeText(
                     it.context,
@@ -66,8 +76,13 @@ class MensagemAdapter(
     // Ao criar o View Holder -> Criar a visualização
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MensagemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
+
         //val itemView = layoutInflater.inflate(R.layout.item_lista, parent, false)
-        val itemView = layoutInflater.inflate(R.layout.item_cardview, parent, false)
+        // Utilizado sem o viewBinding
+        // val itemView = layoutInflater.inflate(R.layout.item_cardview, parent, false)
+
+        val itemView = ItemCardviewBinding.inflate(layoutInflater, parent, false)
+
         return MensagemViewHolder(itemView)
     }
 
