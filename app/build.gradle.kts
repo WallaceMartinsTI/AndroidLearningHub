@@ -61,6 +61,13 @@ dependencies {
     // Fragment KTX do Jetpack
     implementation("androidx.fragment:fragment-ktx:1.8.2")
 
+    // Dependências lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+
+    // Dependência do Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
