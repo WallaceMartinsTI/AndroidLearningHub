@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.recyclerview
+package com.wcsm.androidlearninghub.content_recyclerview
 
 data class Mensagem(
     val nome: String,

@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.interface_components
+package com.wcsm.androidlearninghub.content_interface_components
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.wcsm.androidlearninghub.R
 import com.wcsm.androidlearninghub.databinding.ActivityToolbarBinding
-import com.wcsm.androidlearninghub.databinding.ToolbarBinding
 
 class ToolbarActivity : AppCompatActivity() {
 

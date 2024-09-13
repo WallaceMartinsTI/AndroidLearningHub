@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.interface_components
+package com.wcsm.androidlearninghub.content_interface_components
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.fragment
+package com.wcsm.androidlearninghub.content_fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -11,8 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.wcsm.androidlearninghub.R
-import com.wcsm.androidlearninghub.fragment.fragments.ChamadasFragment
-import com.wcsm.androidlearninghub.fragment.fragments.ConversasFragment
+import com.wcsm.androidlearninghub.content_fragment.fragments.ChamadasFragment
+import com.wcsm.androidlearninghub.content_fragment.fragments.ConversasFragment
 
 class FragmentActivity : AppCompatActivity() {
 

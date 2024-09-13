@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.activity
+package com.wcsm.androidlearninghub.content_activity
 
 import android.os.Bundle
 import android.widget.Button

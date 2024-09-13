@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,39 +15,39 @@
         android:theme="@style/Theme.AndroidLearningHub"
         tools:targetApi="31">
         <activity
-            android:name=".api.ApiActivity"
+            android:name=".content_api.ApiActivity"
             android:exported="false" />
         <activity
-            android:name=".coroutines.CoroutinesActivity"
+            android:name=".content_coroutines.CoroutinesActivity"
             android:exported="false" />
         <activity
-            android:name=".interface_components.ToolbarNovaActivity"
+            android:name=".content_interface_components.ToolbarNovaActivity"
             android:exported="false"
-            android:parentActivityName=".interface_components.ToolbarActivity" />
+            android:parentActivityName=".content_interface_components.ToolbarActivity" />
         <activity
-            android:name=".interface_components.ToolbarActivity"
+            android:name=".content_interface_components.ToolbarActivity"
             android:exported="false" />
         <activity
-            android:name=".interface_components.ActionbarActivity"
+            android:name=".content_interface_components.ActionbarActivity"
             android:exported="false"
             android:theme="@style/ActionBarActivity" />
         <activity
-            android:name=".interface_components.InterfaceComponentsActivity"
+            android:name=".content_interface_components.InterfaceComponentsActivity"
             android:exported="false" />
         <activity
-            android:name=".recyclerview.RecyclerviewActivity"
+            android:name=".content_recyclerview.RecyclerviewActivity"
             android:exported="false" />
         <activity
-            android:name=".fragment.FragmentActivity"
+            android:name=".content_fragment.FragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.DetalhesActivity"
+            android:name=".content_activity.DetalhesActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ActivityActivity"
+            android:name=".content_activity.ActivityActivity"
             android:exported="false" />
         <activity
-            android:name=".scrollview.ScrollviewActivity"
+            android:name=".content_scrollview.ScrollviewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

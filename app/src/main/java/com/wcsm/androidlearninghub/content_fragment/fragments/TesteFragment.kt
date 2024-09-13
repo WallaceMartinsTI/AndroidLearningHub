@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.fragment.fragments
+package com.wcsm.androidlearninghub.content_fragment.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.coroutines
+package com.wcsm.androidlearninghub.content_coroutines
 
 import android.os.Bundle
 import android.util.Log
@@ -9,18 +9,11 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.wcsm.androidlearninghub.R
 import com.wcsm.androidlearninghub.databinding.ActivityCoroutinesBinding
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import kotlinx.coroutines.withTimeout
-import kotlin.system.measureTimeMillis
 
 class CoroutinesActivity : AppCompatActivity() {
 

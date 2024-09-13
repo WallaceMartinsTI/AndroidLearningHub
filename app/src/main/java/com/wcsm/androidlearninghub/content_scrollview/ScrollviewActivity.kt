@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.scrollview
+package com.wcsm.androidlearninghub.content_scrollview
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

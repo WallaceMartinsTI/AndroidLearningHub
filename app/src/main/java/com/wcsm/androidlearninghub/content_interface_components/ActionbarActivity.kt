@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.interface_components
+package com.wcsm.androidlearninghub.content_interface_components
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.coroutines
+package com.wcsm.androidlearninghub.content_coroutines
 
 data class Usuario(
     val id: Int,

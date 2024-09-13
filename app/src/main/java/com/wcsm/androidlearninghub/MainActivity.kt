@@ -28,12 +28,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wcsm.androidlearninghub.activity.ActivityActivity
-import com.wcsm.androidlearninghub.coroutines.CoroutinesActivity
-import com.wcsm.androidlearninghub.fragment.FragmentActivity
-import com.wcsm.androidlearninghub.interface_components.InterfaceComponentsActivity
-import com.wcsm.androidlearninghub.recyclerview.RecyclerviewActivity
-import com.wcsm.androidlearninghub.scrollview.ScrollviewActivity
+import com.wcsm.androidlearninghub.content_activity.ActivityActivity
+import com.wcsm.androidlearninghub.content_api.ApiActivity
+import com.wcsm.androidlearninghub.content_coroutines.CoroutinesActivity
+import com.wcsm.androidlearninghub.content_fragment.FragmentActivity
+import com.wcsm.androidlearninghub.content_interface_components.InterfaceComponentsActivity
+import com.wcsm.androidlearninghub.content_recyclerview.RecyclerviewActivity
+import com.wcsm.androidlearninghub.content_scrollview.ScrollviewActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,11 +69,14 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Interface Components",
                 activity = InterfaceComponentsActivity()
-            )
-            ,
+            ),
             ContentItem(
                 title = "Coroutines",
                 activity = CoroutinesActivity()
+            ),
+            ContentItem(
+                title = "Api",
+                activity = ApiActivity()
             )
         )
 
