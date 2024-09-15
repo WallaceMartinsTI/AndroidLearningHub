@@ -5,6 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content_interface_components.ActionbarActivity">
+    tools:context=".guide_interface_components.ActionbarActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

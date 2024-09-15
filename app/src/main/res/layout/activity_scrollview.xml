@@ -5,7 +5,7 @@
     android:id="@+id/scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content_scrollview.ScrollviewActivity">
+    tools:context=".guide_scrollview.ScrollviewActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout"

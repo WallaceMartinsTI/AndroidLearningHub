@@ -28,13 +28,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wcsm.androidlearninghub.content_activity.ActivityActivity
-import com.wcsm.androidlearninghub.content_api.ApiActivity
-import com.wcsm.androidlearninghub.content_coroutines.CoroutinesActivity
-import com.wcsm.androidlearninghub.content_fragment.FragmentActivity
-import com.wcsm.androidlearninghub.content_interface_components.InterfaceComponentsActivity
-import com.wcsm.androidlearninghub.content_recyclerview.RecyclerviewActivity
-import com.wcsm.androidlearninghub.content_scrollview.ScrollviewActivity
+import com.wcsm.androidlearninghub.guide_activity.ActivityActivity
+import com.wcsm.androidlearninghub.guide_api.ApiActivity
+import com.wcsm.androidlearninghub.guide_coroutines.CoroutinesActivity
+import com.wcsm.androidlearninghub.guide_fragment.FragmentActivity
+import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponentsActivity
+import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
+import com.wcsm.androidlearninghub.guide_scrollview.ScrollviewActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

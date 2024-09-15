@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content_activity.ActivityActivity">
+    tools:context=".guide_activity.ActivityActivity">
 
     <Button
         android:id="@+id/button_abrir"

@@ -15,39 +15,39 @@
         android:theme="@style/Theme.AndroidLearningHub"
         tools:targetApi="31">
         <activity
-            android:name=".content_api.ApiActivity"
+            android:name=".guide_api.ApiActivity"
             android:exported="false" />
         <activity
-            android:name=".content_coroutines.CoroutinesActivity"
+            android:name=".guide_coroutines.CoroutinesActivity"
             android:exported="false" />
         <activity
-            android:name=".content_interface_components.ToolbarNovaActivity"
+            android:name=".guide_interface_components.ToolbarNovaActivity"
             android:exported="false"
-            android:parentActivityName=".content_interface_components.ToolbarActivity" />
+            android:parentActivityName=".guide_interface_components.ToolbarActivity" />
         <activity
-            android:name=".content_interface_components.ToolbarActivity"
+            android:name=".guide_interface_components.ToolbarActivity"
             android:exported="false" />
         <activity
-            android:name=".content_interface_components.ActionbarActivity"
+            android:name=".guide_interface_components.ActionbarActivity"
             android:exported="false"
             android:theme="@style/ActionBarActivity" />
         <activity
-            android:name=".content_interface_components.InterfaceComponentsActivity"
+            android:name=".guide_interface_components.InterfaceComponentsActivity"
             android:exported="false" />
         <activity
-            android:name=".content_recyclerview.RecyclerviewActivity"
+            android:name=".guide_recyclerview.RecyclerviewActivity"
             android:exported="false" />
         <activity
-            android:name=".content_fragment.FragmentActivity"
+            android:name=".guide_fragment.FragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".content_activity.DetalhesActivity"
+            android:name=".guide_activity.DetalhesActivity"
             android:exported="false" />
         <activity
-            android:name=".content_activity.ActivityActivity"
+            android:name=".guide_activity.ActivityActivity"
             android:exported="false" />
         <activity
-            android:name=".content_scrollview.ScrollviewActivity"
+            android:name=".guide_scrollview.ScrollviewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
