@@ -1,4 +1,4 @@
-package com.wcsm.androidlearninghub.guide_api
+package com.wcsm.androidlearninghub.guide_api.api
 
 import com.wcsm.androidlearninghub.guide_api.model.Endereco
 import retrofit2.Response
