@@ -78,6 +78,53 @@ class ApiActivity : AppCompatActivity() {
             delay(1000L)
 
             recuperarComentariosParaPostagem()
+
+            salvarPostagem()
+        }
+    }
+
+    private suspend fun salvarPostagem() {
+        var retorno: Response<Postagem>? = null
+        var retornoForm: Response<Postagem>? = null
+
+        val postagem = Postagem(
+            "Corpo da postagem",
+            -1,
+            "Título da postagem",
+            1090
+        )
+
+        try {
+            val postagemAPI = RetrofitHelper.apiJsonPlace.create(PostagemAPI::class.java)
+
+            retorno = postagemAPI.salvarPostagem(postagem)
+            Log.i("info_jsonplace", "retorno normal: $retorno")
+
+            retornoForm = postagemAPI.salvarPostagemFormulario(
+                1090,
+                -1,
+                "Titulo da postagem Formulario",
+                "Corpo da postagem"
+            )
+            Log.i("info_jsonplace", "retorno formUrlEncoded: $retornoForm")
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.i("info_jsonplace", "erro ao recuperar")
+        }
+
+        if (retorno != null) {
+            if (retorno.isSuccessful) {
+
+                val id = postagem.id
+                val titulo = postagem.title
+                val idUsuario = postagem.userId
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+                Log.i("info_jsonplace", "id: $id - titulo: $titulo - idUsuario: $idUsuario")
+            } else {
+                Log.i("info_jsonplace", "retorno erro: ${retorno.errorBody()}")
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+            }
         }
     }
 
