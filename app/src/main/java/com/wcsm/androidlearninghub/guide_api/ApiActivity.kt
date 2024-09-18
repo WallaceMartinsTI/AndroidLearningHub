@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.squareup.picasso.Picasso
 import com.wcsm.androidlearninghub.R
 import com.wcsm.androidlearninghub.databinding.ActivityApiBinding
 import com.wcsm.androidlearninghub.guide_api.api.EnderecoAPI
@@ -15,6 +16,7 @@ import com.wcsm.androidlearninghub.guide_api.api.RetrofitHelper.Companion.apiJso
 import com.wcsm.androidlearninghub.guide_api.api.RetrofitHelper.Companion.apiViaCep
 import com.wcsm.androidlearninghub.guide_api.model.Comentario
 import com.wcsm.androidlearninghub.guide_api.model.Endereco
+import com.wcsm.androidlearninghub.guide_api.model.Foto
 import com.wcsm.androidlearninghub.guide_api.model.Postagem
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -68,6 +70,8 @@ class ApiActivity : AppCompatActivity() {
                             binding.tvResultadoPostagens.text = resultado
                         }
                     }
+
+                    recuperarFotoUnica()
                 }
             }
         }
@@ -80,6 +84,113 @@ class ApiActivity : AppCompatActivity() {
             recuperarComentariosParaPostagem()
 
             salvarPostagem()
+
+            atualizarPostagem()
+
+            removerPostagem()
+        }
+    }
+
+    private suspend fun recuperarFotoUnica() {
+        var retorno: Response<Foto>? = null
+
+        try {
+            val postagemAPI = apiJsonPlace.create(PostagemAPI::class.java)
+            retorno = postagemAPI.recuperarFoto(5)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.i("info_jsonplace", "erro ao recuperar")
+        }
+
+        if (retorno != null) {
+            if (retorno.isSuccessful) {
+                val foto = retorno.body()
+                val resultado = "[${retorno.code()}] - ${foto?.id} - ${foto?.url}"
+
+                Log.i("info_jsonplace", resultado)
+
+                withContext(Dispatchers.Main) {
+                    Picasso.get()
+                        //.load(foto?.url)
+                        .load(R.drawable.picasso) // Para carregar imagem local, porém o uso do
+                        // Picasso é recomendado para carregar imagens de internet
+                        .resize(100, 200)
+                        //.centerInside()
+                        //.centerCrop()
+                        .placeholder(R.drawable.carregando)
+                        //.error(R.drawable.picasso)
+                        .into(binding.ivFotoRecuperada)
+                }
+            } else {
+                Log.i("info_jsonplace", "retorno erro: ${retorno.errorBody()}")
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+            }
+        }
+    }
+
+    private suspend fun removerPostagem() {
+        var retorno: Response<Unit>? = null
+
+        try {
+            val postagemAPI = RetrofitHelper.apiJsonPlace.create(PostagemAPI::class.java)
+            retorno = postagemAPI.removerPostagem(1)
+            Log.i("info_jsonplace", "retorno: $retorno")
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.i("info_jsonplace", "erro ao recuperar")
+        }
+
+        if (retorno != null) {
+            if (retorno.isSuccessful) {
+                Log.i("info_jsonplace", "Sucesso ao remover postagem!")
+            } else {
+                Log.i("info_jsonplace", "retorno erro: ${retorno.errorBody()}")
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+            }
+        }
+    }
+
+    private suspend fun atualizarPostagem() {
+        var retorno: Response<Postagem>? = null
+
+        val postagem = Postagem(
+            "Corpo da postagem",
+            -1,
+            null, //"Título da postagem",
+            1090
+        )
+
+        try {
+            val postagemAPI = RetrofitHelper.apiJsonPlace.create(PostagemAPI::class.java)
+
+            /*retorno = postagemAPI.atualizarPostagemPut(
+                1,
+                postagemPut
+            )*/
+
+            retorno = postagemAPI.atualizarPostagemPatch(
+                1,
+                Postagem("atualizado patch", -1, null, 1090)
+            )
+
+            Log.i("info_jsonplace", "retorno normal: $retorno")
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.i("info_jsonplace", "erro ao recuperar")
+        }
+
+        if (retorno != null) {
+            if (retorno.isSuccessful) {
+
+                val id = postagem.id
+                val titulo = postagem.title
+                val idUsuario = postagem.userId
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+                Log.i("info_jsonplace", "id: $id - titulo: $titulo - idUsuario: $idUsuario")
+            } else {
+                Log.i("info_jsonplace", "retorno erro: ${retorno.errorBody()}")
+                Log.i("info_jsonplace", "retorno code: ${retorno.code()}")
+            }
         }
     }
 

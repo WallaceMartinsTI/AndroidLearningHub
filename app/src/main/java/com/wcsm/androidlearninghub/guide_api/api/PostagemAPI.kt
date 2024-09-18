@@ -1,13 +1,17 @@
 package com.wcsm.androidlearninghub.guide_api.api
 
 import com.wcsm.androidlearninghub.guide_api.model.Comentario
+import com.wcsm.androidlearninghub.guide_api.model.Foto
 import com.wcsm.androidlearninghub.guide_api.model.Postagem
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.PATCH
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -45,4 +49,25 @@ interface PostagemAPI {
         @Field("body") body: String
     ): Response<Postagem>
 
+    @PUT("posts/{id}")
+    suspend fun atualizarPostagemPut(
+        @Path("id") id: Int,
+        @Body postagem: Postagem
+    ): Response<Postagem>
+
+    @PATCH("posts/{id}")
+    suspend fun atualizarPostagemPatch(
+        @Path("id") id: Int,
+        @Body postagem: Postagem
+    ): Response<Postagem>
+
+    @DELETE("posts/{id}")
+    suspend fun removerPostagem(
+        @Path("id") id: Int,
+    ): Response<Unit>
+
+    @GET("photos/{id}")
+    suspend fun recuperarFoto(
+        @Path("id") id: Int
+    ): Response<Foto>
 }
