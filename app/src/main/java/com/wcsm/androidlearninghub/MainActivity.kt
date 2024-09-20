@@ -33,6 +33,7 @@ import com.wcsm.androidlearninghub.guide_api.ApiActivity
 import com.wcsm.androidlearninghub.guide_coroutines.CoroutinesActivity
 import com.wcsm.androidlearninghub.guide_fragment.FragmentActivity
 import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponentsActivity
+import com.wcsm.androidlearninghub.guide_notification.NotificationActivity
 import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
 import com.wcsm.androidlearninghub.guide_scrollview.ScrollviewActivity
 
@@ -77,6 +78,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Api",
                 activity = ApiActivity()
+            ),
+            ContentItem(
+                title = "Notificação",
+                activity = NotificationActivity()
             )
         )
 
