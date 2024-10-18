@@ -36,6 +36,7 @@ import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponent
 import com.wcsm.androidlearninghub.guide_notification.NotificationActivity
 import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
 import com.wcsm.androidlearninghub.guide_scrollview.ScrollviewActivity
+import com.wcsm.androidlearninghub.guide_splashscreen.SplashScreenActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         setContent {
             LearningHub()
         }
-
     }
 
     @Preview(showBackground = true)
@@ -82,6 +82,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Notificação",
                 activity = NotificationActivity()
+            ),
+            ContentItem(
+                title = "Splash Screen",
+                activity = SplashScreenActivity()
             )
         )
 
