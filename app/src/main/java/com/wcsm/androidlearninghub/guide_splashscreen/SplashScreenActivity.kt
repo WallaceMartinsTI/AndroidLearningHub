@@ -1,5 +1,6 @@
 package com.wcsm.androidlearninghub.guide_splashscreen
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.wcsm.androidlearninghub.MainActivity
 import com.wcsm.androidlearninghub.R
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
