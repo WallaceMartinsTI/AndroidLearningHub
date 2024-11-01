@@ -17,6 +17,9 @@
         android:theme="@style/Theme.AndroidLearningHub"
         tools:targetApi="31">
         <activity
+            android:name=".guide_handle_internet_connection.HandleInternetConnectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".guide_splashscreen.SplashScreenActivity"
             android:exported="false" />
         <activity
