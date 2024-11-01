@@ -32,6 +32,7 @@ import com.wcsm.androidlearninghub.guide_activity.ActivityActivity
 import com.wcsm.androidlearninghub.guide_api.ApiActivity
 import com.wcsm.androidlearninghub.guide_coroutines.CoroutinesActivity
 import com.wcsm.androidlearninghub.guide_fragment.FragmentActivity
+import com.wcsm.androidlearninghub.guide_handle_internet_connection.HandleInternetConnectionActivity
 import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponentsActivity
 import com.wcsm.androidlearninghub.guide_notification.NotificationActivity
 import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
@@ -86,6 +87,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Splash Screen",
                 activity = SplashScreenActivity()
+            ),
+            ContentItem(
+                title = "Conexão a Internet",
+                activity = HandleInternetConnectionActivity()
             )
         )
 
