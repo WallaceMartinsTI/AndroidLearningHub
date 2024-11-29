@@ -34,6 +34,7 @@ import com.wcsm.androidlearninghub.guide_coroutines.CoroutinesActivity
 import com.wcsm.androidlearninghub.guide_fragment.FragmentActivity
 import com.wcsm.androidlearninghub.guide_handle_internet_connection.HandleInternetConnectionActivity
 import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponentsActivity
+import com.wcsm.androidlearninghub.guide_music_player_notification.MusicPlayerActivity
 import com.wcsm.androidlearninghub.guide_notification.NotificationActivity
 import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
 import com.wcsm.androidlearninghub.guide_scrollview.ScrollviewActivity
@@ -91,6 +92,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Conexão a Internet",
                 activity = HandleInternetConnectionActivity()
+            ),
+            ContentItem(
+                title = "Music Player Notification",
+                activity = MusicPlayerActivity()
             )
         )
 

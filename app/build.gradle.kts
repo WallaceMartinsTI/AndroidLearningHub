@@ -71,6 +71,9 @@ dependencies {
     // Dependência picasso
     implementation("com.squareup.picasso:picasso:2.8")
 
+    // Media
+    implementation("androidx.media:media:1.1.0")
+
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
