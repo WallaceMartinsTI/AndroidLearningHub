@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".CustomApplication"
+        android:name=".application.AndroidLearningHubApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,15 +17,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearningHub"
         tools:targetApi="31">
+        <activity
+            android:name=".guide_koin.core.presentation.KoinActivity"
+            android:exported="false" />
 
         <receiver
             android:name=".guide_music_player_notification.services.NotificationActionService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
 
-        <service android:name=".guide_music_player_notification.services.OnClearFromRecentService"
+        <service
+            android:name=".guide_music_player_notification.services.OnClearFromRecentService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
 
         <activity
             android:name=".guide_music_player_notification.MusicPlayerActivity"

@@ -74,6 +74,10 @@ dependencies {
     // Media
     implementation("androidx.media:media:1.1.0")
 
+    // Koin
+    implementation("io.insert-koin:koin-android:3.5.3")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.3")
+
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
