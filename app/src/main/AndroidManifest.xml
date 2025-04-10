@@ -18,6 +18,9 @@
         android:theme="@style/Theme.AndroidLearningHub"
         tools:targetApi="31">
         <activity
+            android:name=".guide_atomic_design.presentation.AtomicDesignActivity"
+            android:exported="false" />
+        <activity
             android:name=".guide_koin.core.presentation.KoinActivity"
             android:exported="false" />
 

@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.wcsm.androidlearninghub.guide_activity.ActivityActivity
 import com.wcsm.androidlearninghub.guide_api.ApiActivity
+import com.wcsm.androidlearninghub.guide_atomic_design.presentation.AtomicDesignActivity
 import com.wcsm.androidlearninghub.guide_coroutines.CoroutinesActivity
 import com.wcsm.androidlearninghub.guide_fragment.FragmentActivity
 import com.wcsm.androidlearninghub.guide_handle_internet_connection.HandleInternetConnectionActivity
@@ -101,6 +102,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Koin (DI)",
                 activity = KoinActivity()
+            ),
+            ContentItem(
+                title = "Atomic Design",
+                activity = AtomicDesignActivity()
             )
         )
 
