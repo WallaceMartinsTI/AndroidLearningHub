@@ -81,6 +81,8 @@
         <activity
             android:name=".guide_scrollview.ScrollviewActivity"
             android:exported="false" />
+        <activity android:name=".guide_one_time_password.OtpActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

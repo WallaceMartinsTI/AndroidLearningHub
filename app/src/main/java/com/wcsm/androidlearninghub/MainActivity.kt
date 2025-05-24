@@ -38,6 +38,7 @@ import com.wcsm.androidlearninghub.guide_interface_components.InterfaceComponent
 import com.wcsm.androidlearninghub.guide_koin.core.presentation.KoinActivity
 import com.wcsm.androidlearninghub.guide_music_player_notification.MusicPlayerActivity
 import com.wcsm.androidlearninghub.guide_notification.NotificationActivity
+import com.wcsm.androidlearninghub.guide_one_time_password.OtpActivity
 import com.wcsm.androidlearninghub.guide_recyclerview.RecyclerviewActivity
 import com.wcsm.androidlearninghub.guide_scrollview.ScrollviewActivity
 import com.wcsm.androidlearninghub.guide_splashscreen.SplashScreenActivity
@@ -106,6 +107,10 @@ class MainActivity : AppCompatActivity() {
             ContentItem(
                 title = "Atomic Design",
                 activity = AtomicDesignActivity()
+            ),
+            ContentItem(
+                title = "(OTP) One Time Password",
+                activity = OtpActivity()
             )
         )
 
